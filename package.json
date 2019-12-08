@@ -1,0 +1,13 @@
+{
+  "name": "hello-graphql-federation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dolphub/hello-graphql-federation.git",
+  "workspaces": true,
+  "author": "Randy Mikkelsaar <randy.mikkelsaar@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.16.4",
+    "typescript": "^3.7.3"
+  }
+}
