@@ -1,9 +1,10 @@
 import { Field, ID, ObjectType } from 'type-graphql';
+import { Post } from '../../posts/models/posts.model';
 
 @ObjectType()
 export class User {
   @Field(type => ID)
-  id: string;
+  id: number;
 
   @Field()
   name: string;
@@ -16,4 +17,7 @@ export class User {
 
   @Field(type => [String])
   hobbies: string[];
+
+  @Field(type => [Post])
+  posts?: Post[];
 }

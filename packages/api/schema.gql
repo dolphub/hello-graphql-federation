@@ -16,9 +16,19 @@ input NewUserInput {
   hobbies: [String!]!
 }
 
+type Post {
+  id: ID!
+  content: String!
+  createdBy: User!
+  createdAt: Date!
+  likes: [User!]
+}
+
 type Query {
-  user(id: String!): User!
+  user(id: Float!): User!
   users(skip: Int = 0, take: Int = 25): [User!]!
+  getPost(id: Float!): Post!
+  posts: [Post!]!
 }
 
 type User {
@@ -27,4 +37,5 @@ type User {
   description: String
   creationDate: Date!
   hobbies: [String!]!
+  posts: [Post!]!
 }
